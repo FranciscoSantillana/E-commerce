@@ -1,0 +1,47 @@
+/* Variables para colores*/
+$primary_1: #F5F7F8;
+$primary_2: #F4CE14;
+$primary_3: #495E57;
+$primary_4: #45474B;
+$primary__5: #ccc;
+
+/* variables par dimenciones*/
+$myFontSize: 15px;
+$myWidth: 300px;
+$myFont: "Lexend", Arial, Helvetica, sans-serif;
+$myText:center;
+/* mixin*/
+@mixin flexbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin elements($paddingtb){
+    width: 100%;
+    padding: $paddingtb;
+    box-sizing: border-box;
+}
+@mixin text($width,$fontWeight,$fontSize){
+    width: $width;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    text-align: center;
+
+}
+@mixin Ipad_Air{
+    @media screen and (max-width: 820px) {
+        @content
+        };
+}
+
+@mixin phones{
+    @media screen and (max-width: 480px) {
+        @content
+        };
+}
+/* Extend*/
+%link{    
+    text-decoration:none;
+    color: $primary_1;
+
+}
